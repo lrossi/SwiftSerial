@@ -3,5 +3,14 @@
 import PackageDescription
 
 let package = Package(
-    name: "SwiftSerial"
+    name: "SwiftSerial",
+    products: [
+        .library(name: "SwiftSerial", targets: ["SwiftSerial"])
+    ],
+    targets: [
+        .target(
+            name: "SwiftSerial",
+            path: "Sources"
+        )
+    ]
 )
